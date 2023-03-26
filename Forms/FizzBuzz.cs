@@ -12,18 +12,21 @@ namespace FizzBuzzWeb.Forms
         public string CheckNumber(int? number)
         {
             string message = "";
-            if (number % 3 == 0)
+            if(number >= 1 && number <= 1000)
             {
-                message += "Fizz";
-            }
-            if (number % 5 == 0)
-            {
-                message += "Buzz";
-            }
+                if (number % 3 == 0)
+                {
+                    message += "Fizz";
+                }
+                if (number % 5 == 0)
+                {
+                    message += "Buzz";
+                }
 
-            if (message == "")
-            {
-                message = "Liczba: " + number + " nie spełnia kryteriów FizzBuzz";
+                if (message == "")
+                {
+                    message = "Liczba: " + number + " nie spełnia kryteriów FizzBuzz";
+                }
             }
 
             return message;

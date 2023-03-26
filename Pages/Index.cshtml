@@ -3,13 +3,13 @@
 @{
 	ViewData["Title"] = "Fizz Buzz";
 }
-<div class="text-wrap">
+<div class="text">
 		<h1 class="display-4">Welcome @Model.Name</h1>
 	<form method="post">
 			<label asp-for="FizzBuzz.Number" class="mb-3"></label>
 			<input asp-for="FizzBuzz.Number" class="form-control" />
 		<button class="btn btn-primary mt-3 mb-3" type="submit">Zatwierdź</button> </br>
-		<span asp-validation-for="FizzBuzz.Number" class=" text-danger mt-3 mb-3"></span></br>
+		<span asp-validation-for="FizzBuzz.Number" class=" text-danger"></span>
 		</form>
 	<div class="alert alert-success" role="alert">
 		@Model.Message
